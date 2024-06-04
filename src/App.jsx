@@ -1,22 +1,13 @@
 
 import './App.css'
-import Foot from './Components/Foot'
-import Logo from './Components/Logo'
-import Photos from './Components/Photos'
-import Third from './Components/Third'
-
-
+import IndexMain from './Components/IndexMain'
 
 function App() {
-
-
   return (
     <>
-     {/* <Logo/> */}
-{/* <Photos/> */}
-{/* <Third/> */}
-{/* <Scoll/> */}
-<Foot/>
+      <div className='bg-slate-100 w-screen h-screen'>
+        <IndexMain />
+      </div>
     </>
   )
 }

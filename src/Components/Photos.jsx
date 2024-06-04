@@ -40,7 +40,7 @@ export default function Photos() {
     ]
     return (
         <div>
-            <div className='w-64 h-20 border-2 rounded-lg bg-[#88C2BB]'>
+            <div className='w-64 h20- border-2 rounded-lg bg-[#88C2BB] overflow-hidden'>
                 <p className='font-Gilroy font-semibold text-base text-[#FFFFFF] text-center py-6'>Become a Seller</p>
             </div>
             <div className='flex items-center gap-6'>

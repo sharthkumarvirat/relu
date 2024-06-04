@@ -37,28 +37,32 @@ export default function Foot() {
     return (
         <div>
             <div className='flex'>
-                {
-                    pictr.map((item) => {
-                        return (
-                            <div>
-                                <img src={item.imgs} height={180} width={252} alt="" />
-                                <div className='flex'>
-                                    <p className='font-Barlow font-semibold text-base text-[#101010]'>{item.headng}</p>
-                                </div>
-                                <div className='flex items-center justify-around gap-12'>
-                                    <p className='font-Barlow font-semibold text-lg text-[#101010]'>{item.rupees}</p>
-                                    <div className='flex items-center gap-1'>
-                                    <img src={item.stars} alt="" />
-                                    <img src={item.stars} alt="" />
-                                    <img src={item.stars} alt="" />
-                                    <img src={item.stars} alt="" />
-                                    <img src={item.stars} alt="" />
+                <div className="carousel carousel-center max-w-md p-4 space-x-4 bg-neutral rounded-box">
+                    <div className="carousel-item max-h-[12rem]">
+                        {
+                            pictr.map((item) => {
+                                return (
+                                    <div>
+                                        <img src={item.imgs} width={252} alt="" className="rounded-box min-h-[180px]" />
+                                        <div className='flex'>
+                                            <p className='font-Barlow font-semibold text-base text-[#101010]'>{item.headng}</p>
+                                        </div>
+                                        <div className='flex items-center justify-around gap-12'>
+                                            <p className='font-Barlow font-semibold text-lg text-[#101010]'>{item.rupees}</p>
+                                            <div className='flex items-center gap-1'>
+                                                <img src={item.stars} alt="" />
+                                                <img src={item.stars} alt="" />
+                                                <img src={item.stars} alt="" />
+                                                <img src={item.stars} alt="" />
+                                                <img src={item.stars} alt="" />
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        )
-                    })
-                }
+                                )
+                            })
+                        }
+                    </div>
+                </div>
             </div>
         </div>
     )

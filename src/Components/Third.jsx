@@ -7,9 +7,9 @@ import thomos from "../assets/thomos.png";
 import thomos1 from "../assets/thomos-1.png";
 import like from "../assets/heart.png";
 import comment from "../assets/comment.png";
+import dots from "../assets/dots.png";
 import share from "../assets/share.png";
-
-
+import Foot from "./Foot";
 
 export default function Third() {
     const container = [
@@ -31,8 +31,8 @@ export default function Third() {
         },
     ]
     return (
-        <div>
-            <div className='w-[620px]  border-2 bg-[#FFFFFF] p-6'>
+        <div className='h-screen'>
+            <div className='w-[620px] border-2 bg-[#FFFFFF] p-6'>
                 <div className='flex items-center justify-between'>
                     <div className='flex items-center gap-2'>
                         <img src={search} alt="" />
@@ -44,19 +44,24 @@ export default function Third() {
                     </div>
                 </div>
             </div>
-            <div>
+            <div className='h-screen overflow-y-scroll'>
                 {
                     container.map((items) => {
                         return (
                             <div className='w-[620px] h-[590px] border-2 bg-[#F5F5F5] p-5 mb-5 mt-6'>
 
-                                <div className='flex items-center gap-3 m-2'>
-                                    <div>
-                                        <img src={items.profi} height={48} width={48} alt="" />
+                                <div className='flex ites-center justify-between'>
+                                    <div className='flex items-center gap-3 mb-5'>
+                                        <div>
+                                            <img src={items.profi} height={48} width={48} alt="" />
+                                        </div>
+                                        <div className='flex items-left flex-col '>
+                                            <p className='font-Gilroy font-semibold text-xl text-[#101010]'>{items.namer}</p>
+                                            <p className='font-Gilroy font-medium text-sm text-[#8D8D8D]'>{items.usernmes}</p>
+                                        </div>
                                     </div>
-                                    <div className='flex items-center flex-col mb-5'>
-                                        <p className='font-Gilroy font-semibold text-xl text-[#101010]'>{items.namer}</p>
-                                        <p className='font-Gilroy font-medium text-sm text-[#8D8D8D]'>{items.usernmes}</p>
+                                    <div className='flex items-center justify-center'>
+                                        <img src={dots} height={30} width={30} alt="" srcset="" />
                                     </div>
                                 </div>
                                 <div>
@@ -81,6 +86,7 @@ export default function Third() {
                         )
                     })
                 }
+                <Foot />
             </div>
         </div>
     )
