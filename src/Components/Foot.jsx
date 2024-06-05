@@ -37,17 +37,17 @@ export default function Foot() {
     return (
         <div>
             <div className='flex'>
-                <div className="carousel carousel-center max-w-md p-4 space-x-4 bg-neutral rounded-box">
-                    <div className="carousel-item max-h-[12rem]">
+                <div className="carousel carousel-center w-[38rem] p-4 space-x-4 bg-[#F5F5F5] rounded-box">
+                    <div className="carousel-item max-h-[15rem]">
                         {
                             pictr.map((item) => {
                                 return (
-                                    <div>
-                                        <img src={item.imgs} width={252} alt="" className="rounded-box min-h-[180px]" />
-                                        <div className='flex'>
-                                            <p className='font-Barlow font-semibold text-base text-[#101010]'>{item.headng}</p>
+                                    <div className='p-2'>
+                                        <img src={item.imgs} style={{width:252, height:180}} alt="" className="rounded-box" />
+                                        <div className='flex item-center gap-3'>
+                                            <p className='font-Barlow font-semibold text-sm text-[#101010]'>{item.headng}</p>
                                         </div>
-                                        <div className='flex items-center justify-around gap-12'>
+                                        <div className='flex items-center justify-around gap-14'>
                                             <p className='font-Barlow font-semibold text-lg text-[#101010]'>{item.rupees}</p>
                                             <div className='flex items-center gap-1'>
                                                 <img src={item.stars} alt="" />

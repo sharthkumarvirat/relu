@@ -30,7 +30,7 @@ export default function Photos() {
             usernm: "@thewildwithyou"
         },
         {
-            bg_img: image4,
+            bg_img: image5,
             profile: profile4,
             name: "Jessica Williams",
             usernm: "@thewildwithyou"
@@ -47,17 +47,15 @@ export default function Photos() {
                 <p className='font-Gilroy font-semibold text-base text-[#101010]'>Artist</p>
                 <p className='font-Gilroy font-semibold text-base text-[#8D8D8D]'>Photographers</p>
             </div>
-            <div>
 
-                {/* <div className='contentMain1 w-[244px] h-[120px]'>
-          
-      </div> */}
+            <div>
                 {
                     sets.map((element) => {
                         return (
                             <div>
-                                <div style={{ background:`transparent URL(${element.bg_img}) 0% 0%`, backgroundRepeat: "no-repeat", backgroundSize: "cover", height: "120px", width: "244px", borderRadius: "10px" }}>
-                                    <div className='flex items-center gap-4 py-14 p-2 mt-6'>
+                                <div style={{ background: `transparent URL(${element.bg_img}) 0% 0%`, backgroundRepeat: "no-repeat", backgroundSize: "cover", height: "120px", width: "244px", borderRadius: "10px" }}>
+                                    <div className='flex items-center gap-1 py-14  mt-6'>
+                                        <div className='w-[12px] h-[12px] border-2 border-[#FFFFFF] rounded-full bg-[#0EC297]  relative left-[55px] top-[-20px]'></div>
                                         <img src={element.profile} height={48} width={48} alt="" />
                                         <div className='flex items-center flex-col'>
                                             <p className='font-Gilroy font-semibold text-base text-[#FFFFFF]'>{element.name}</p>
@@ -70,6 +68,15 @@ export default function Photos() {
                         )
                     })
                 }
+                <div className='w-[246px] h-[120px] border-0 bg-[#F5F5F5] mt-5'>
+                    <img src={image4}  alt="" style={{width:244, height:60} } />
+                    <div className='flex item-center gap-4'>
+                        <p className='font-semibold text-xs text-[8D8D8D] opacity-75'>Privacy </p>
+                        <p className='font-semibold text-xs text-[8D8D8D] opacity-75' >Terms of Service </p>
+                        <p className='font-semibold text-xs text-[8D8D8D] opacity-75'>Cookie Notice</p>
+
+                    </div>
+                </div>
             </div>
 
         </div>

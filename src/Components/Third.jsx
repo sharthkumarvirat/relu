@@ -32,7 +32,7 @@ export default function Third() {
     ]
     return (
         <div className='h-screen'>
-            <div className='w-[620px] border-2 bg-[#FFFFFF] p-6'>
+            <div className='w-[620px] border-0 bg-[#FFFFFF] rounded-[10px] p-6'>
                 <div className='flex items-center justify-between'>
                     <div className='flex items-center gap-2'>
                         <img src={search} alt="" />
@@ -48,7 +48,7 @@ export default function Third() {
                 {
                     container.map((items) => {
                         return (
-                            <div className='w-[620px] h-[590px] border-2 bg-[#F5F5F5] p-5 mb-5 mt-6'>
+                            <div className='w-[620px] h-[590px] border-0 rounded-[10px] bg-[#FFFFFF] p-5 mb-5 mt-6'>
 
                                 <div className='flex ites-center justify-between'>
                                     <div className='flex items-center gap-3 mb-5'>
@@ -56,8 +56,8 @@ export default function Third() {
                                             <img src={items.profi} height={48} width={48} alt="" />
                                         </div>
                                         <div className='flex items-left flex-col '>
-                                            <p className='font-Gilroy font-semibold text-xl text-[#101010]'>{items.namer}</p>
-                                            <p className='font-Gilroy font-medium text-sm text-[#8D8D8D]'>{items.usernmes}</p>
+                                            <p className='font-Gilroy font-semibold text-xl text-[#101010] opacity-100'>{items.namer}</p>
+                                            <p className='font-Gilroy font-medium text-sm text-[#8D8D8D] opacity-90'>{items.usernmes}</p>
                                         </div>
                                     </div>
                                     <div className='flex items-center justify-center'>
@@ -65,7 +65,7 @@ export default function Third() {
                                     </div>
                                 </div>
                                 <div>
-                                    <p className='font-Gilroy font-medium text-smtext-[#101010] mb-6'>{items.content}.Read More</p>
+                                    <p className='font-Gilroy font-medium text-sm text-[#101010] mb-6 opacity-95'>{items.content} <span className='Font-medium text-sm text-[#FF5E8A]'>.Read More</span> </p>
                                     <img src={items.bgIm} alt="" />
                                 </div>
                                 <div className='flex items-center gap-8 mt-10'>
