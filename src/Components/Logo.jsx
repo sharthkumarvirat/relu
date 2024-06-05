@@ -56,10 +56,10 @@ export default function Logo() {
                         side.map((ele) => {
                             return (
                                 <div className='hover:border-s-4 border-[#88C2BB]'>
-                                <div className='flex items-center gap-3 p-1 mt-8 ml-8'>
-                                    <img src={ele.logos} alt="" />
-                                    <h1 className='font-semibold text-base text-[#8D8D8D] hover:text-[#101010]'>{ele.heading}</h1>
-                                </div>
+                                    <div className='flex items-center gap-3 p-1 mt-8 ml-8'>
+                                        <img src={ele.logos} alt="" />
+                                        <h1 className='font-semibold text-base text-[#8D8D8D] hover:text-[#101010]'>{ele.heading}</h1>
+                                    </div>
                                 </div>
                             )
                         })
@@ -67,13 +67,13 @@ export default function Logo() {
                 </div>
                 <div className='flex items-center gap-3 p-4'>
                     <img src={Log} alt="" />
-                   <Link to="/"><h1 className='font-semibold text-base text-[#8D8D8D]'>Log out</h1></Link> 
+                    <Link to="/"><h1 className='font-semibold text-base text-[#8D8D8D]'>Log out</h1></Link>
                 </div>
             </div>
-                <div className='flex items-center gap-4'>
-                    <p className='font-semibold text-xs text-[8D8D8D] opacity-75'>2022©logo name</p>
-                    <p className='font-semibold text-xs text-[8D8D8D] opacity-75'>Developed by ivan Infotech</p>
-                </div>
+            <div className='flex items-center gap-4 mt-2'>
+                <p className='font-semibold text-xs text-[8D8D8D] opacity-75'>2022©logo name</p>
+                <p className='font-semibold text-xs text-[8D8D8D] opacity-75'>Developed by ivan Infotech</p>
+            </div>
         </div>
     )
 }

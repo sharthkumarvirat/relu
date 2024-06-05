@@ -44,7 +44,7 @@ export default function Third() {
                     </div>
                 </div>
             </div>
-            <div className='h-screen overflow-y-scroll'>
+            <div className='h-screen overflow-y-scroll mt-2'>
                 {
                     container.map((items) => {
                         return (

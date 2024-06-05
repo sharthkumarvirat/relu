@@ -6,7 +6,7 @@ import Third from "./Third";
 export default function IndexMain() {
     return (
         <div>
-            <div className='flex gap-6 p-4 h-screen w-screen ites-center justify-center overflow-hidden'>
+            <div className='flex gap-6 p-4 h-screen w-screen ites-center justify-center overflow-x-auto '>
                 <Logo />
                 <Third />
                 <Photos />
