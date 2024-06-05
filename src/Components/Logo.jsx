@@ -8,6 +8,7 @@ import Sub from "../assets/subscription.svg";
 import Profile from "../assets/profile.svg";
 import Setting from "../assets/setting.svg";
 import Log from "../assets/logout.svg";
+import { Link } from 'react-router-dom';
 
 export default function Logo() {
     const side = [
@@ -66,7 +67,7 @@ export default function Logo() {
                 </div>
                 <div className='flex items-center gap-3 p-4'>
                     <img src={Log} alt="" />
-                    <h1 className='font-semibold text-base text-[#8D8D8D]'>Log out</h1>
+                   <Link to="/"><h1 className='font-semibold text-base text-[#8D8D8D]'>Log out</h1></Link> 
                 </div>
             </div>
                 <div className='flex items-center gap-4'>
