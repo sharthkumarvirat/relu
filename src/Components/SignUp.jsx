@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { auth, db } from './Firebase';
 import { setDoc, doc } from "firebase/firestore";
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function SignUp() {
     const [showPassword, setShowPassword] = useState(false)
@@ -14,6 +15,9 @@ export default function SignUp() {
         password: "",
     });
     const nav = useNavigate();
+
+    //Toast
+    const notify = () => toast.warn("Wow so easy!");
 
     const handleChange = (e) => {
         // console.log(e.target.name + " = " + e.target.value);
@@ -64,8 +68,12 @@ export default function SignUp() {
                     </label>
                     <button onClick={handleSubmit} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-md">Submit</button>
                 </div>
+                <button onClick={notify} >Toast</button>
                 <Link to="/" ><button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-md">Sign In</button></Link>
             </div>
+
+            <ToastContainer />
+
         </div>
     )
 }
