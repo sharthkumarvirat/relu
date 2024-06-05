@@ -27,7 +27,8 @@ export default function SignIn() {
             //    console.log("welcom to firebase");
             navigate('/main');
             alert("login suceesfull");
-        } catch (error) {
+        } 
+        catch (error) {
             console.log(error.message);
             alert(error.message);
         }
@@ -35,7 +36,7 @@ export default function SignIn() {
     return (
         <div className='flex items-center justify-center'>
 
-            <div className='flex items-center flex-col justify-center gap-3 justify-center h-[24rem] w-[29rem]  p-10 box mt-16 '>
+            <div className='flex items-center flex-col justify-center gap-3 h-[24rem] w-[29rem]  p-10 box mt-16 '>
                 <div className='flex flex-col w-[23rem] gap-2'>
                     <label className="input input-bordered flex items-center gap-4">
                         Email
