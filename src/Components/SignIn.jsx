@@ -2,6 +2,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react'
 import { Link, useNavigate } from "react-router-dom";
 import { auth } from './Firebase';
+import { ToastContainer, toast } from 'react-toastify';
 
 export default function SignIn() {
     const [showPass, setShowPass] = useState(false)
@@ -11,7 +12,13 @@ export default function SignIn() {
     })
 
     const navigate = useNavigate()
-
+   
+    const notice =()=> toast.success("login successful!!",{
+        position:"top-center"
+    })
+    const waring=(message)=>toast.warn(message,{
+        position:"top-center"
+    })
 
     const handleChange = (e) => {
         // console.log( e.target.name + " = " + e.target.value);
@@ -25,12 +32,14 @@ export default function SignIn() {
         try {
             await signInWithEmailAndPassword(auth, email, password)
             //    console.log("welcom to firebase");
-            navigate('/main');
-            alert("login suceesfull");
+            notice()
+            setTimeout(()=>{
+                navigate('/main');
+                
+            },2000)
         } 
         catch (error) {
-            console.log(error.message);
-            alert(error.message);
+           waring(error.message)
         }
     }
     return (
@@ -51,6 +60,7 @@ export default function SignIn() {
                 </div>
                 <Link to='/signup'><button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-md" >Sign up</button></Link>
             </div>
+            <ToastContainer/>
         </div>
     )
 }

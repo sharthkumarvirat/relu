@@ -17,7 +17,12 @@ export default function SignUp() {
     const nav = useNavigate();
 
     //Toast
-    const notify = () => toast.warn("Wow so easy!");
+    const notify = () => toast.success("register successfull!",{
+        position:"top-center"
+    });
+    const notifyError = (message) => toast.error(message,{
+        position:"top-center"
+    });
 
     const handleChange = (e) => {
         // console.log(e.target.name + " = " + e.target.value);
@@ -27,6 +32,7 @@ export default function SignUp() {
     }
     const handleSubmit = async () => {
         const { email, firstname, password, lastname } = registerData
+        
         try {
             await createUserWithEmailAndPassword(auth, email, password)
             const user = auth.currentUser;
@@ -38,10 +44,14 @@ export default function SignUp() {
                     lastName: lastname
                 });
             }
-            alert("register succesfull")
-            nav("/")
+            notify()
+            setTimeout(()=>{
+                nav("/")
+
+            },2000)
         } catch (error) {
-            alert(error.message)
+            console.log(error);
+           notifyError(error.message)
         }
     }
 
@@ -68,7 +78,6 @@ export default function SignUp() {
                     </label>
                     <button onClick={handleSubmit} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-md">Submit</button>
                 </div>
-                <button onClick={notify} >Toast</button>
                 <Link to="/" ><button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-md">Sign In</button></Link>
             </div>
 
